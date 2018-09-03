@@ -1,3 +1,13 @@
+/* Universal */
+
+.relative {
+    display: relative;
+}
+
+body {
+    background-image: url(../images/bananas.png);
+}
+
 .parentheader {
     line-height: 75px;
     background: #ffffff;
@@ -8,8 +18,8 @@
 .mainheader { 
     display: flex; 
     justify-content: space-between;
-    width: 960px;
-    margin: auto;
+    margin-left: 5%;
+    margin-right: 5%;
   }
 
 .mainheaderleft {
@@ -38,13 +48,12 @@
     color: #edeced;
 }
 
-body {
-    background-image: url(../images/bananas.png);
-}
-
 .parentbody {
-    width: 960px;
-    margin: auto;
+    width: 700px;
+    bottom: 100px;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-bottom: 10%;
 
 }
 
@@ -97,10 +106,17 @@ body {
     font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
     color: #b2a795;
     font-size: 10px;
-    position: absolute;
-    bottom: -50%;
+    position: fixed;
     width: 100%;
+    bottom: 0%;
+    display: block;
 }
+
+.footertext {
+    margin-bottom: 0;
+}
+
+
 
 /* Additional Items for Contact Page */
 .topline {
@@ -159,25 +175,21 @@ input::-webkit-input-placeholder {
 /* Additional Items for Portfolio Page */
 .container {
     display: flex;
-    flex-direction: row;
-  }
+    flex-wrap: wrap;
+    width: auto;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+}
   
-  .row {
-    display: flex;
-    width: 600px;
- }
-
- .row_cell {
-    flex: 2;
-    margin-right: 2%;
-    margin-bottom: 3%;
- }
-  .row .row_cell img {
-    width: 100%;
+.portfolioimg {
+    width: 20em;
+    height: auto;
 }
 
-.whitespace {
-    height: 100px;
+.imgcontainer {
+    margin: 1%;
+    position: relative;
 }
 
 /* Container holding the image and the text */
@@ -186,7 +198,7 @@ input::-webkit-input-placeholder {
 /* Bottom right text */
 .imgblock {
     position: absolute;
-    top: 100px;
+    top: 70%;
     background-color: #41a09b;
     color: white;
     width: 100%;
@@ -195,6 +207,59 @@ input::-webkit-input-placeholder {
     text-align: center;
 }
 
-.imgcontainer {
-    position: relative;
+
+/* Media Query 980px */
+@media only screen and (min-width: 769px) {
+.mainheader { 
+    max-width: 900px;
+}
+
+.container {
+    justify-content: flex-start;
+}
+}
+    
+    
+    
+/* Media Query 768px */
+@media only screen and (max-width: 768px) {
+.mainheader { 
+    margin-left: 2%;
+    margin-right: 2%;
+    }
+    
+.parentbody {
+    margin-left: 2%;
+    margin-right: 2%;
+    width: auto;
+}
+    
+}
+    
+/* Media Query 640px */
+@media only screen and (max-width: 640px) {
+    
+.mainheader { 
+    display: flex; 
+    flex-wrap: wrap;
+    margin: auto;
+}
+    
+.mainheaderleft {
+    text-align: center;
+    width: 640px
+}
+    
+.mainheaderright  {
+    text-align: center;
+    width: 640px;
+    line-height: 400%;
+}
+    
+.portfolioimg {
+    width: 30em;
+    height: auto;
+   }
+
+
 }
