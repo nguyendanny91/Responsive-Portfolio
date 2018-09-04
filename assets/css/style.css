@@ -64,6 +64,7 @@ body {
     margin-top: 35px;
     padding-left: 2%;
     padding-right: 2%;
+    padding-top: 2%;
 }
 
 .bodyheader {
@@ -133,7 +134,7 @@ body {
 }
 
 input {
-    width:99.5%;
+    width: 100%;
 }
 
 input,
@@ -179,7 +180,7 @@ input::-webkit-input-placeholder {
     width: auto;
     height: auto;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 }
   
 .portfolioimg {
@@ -209,20 +210,16 @@ input::-webkit-input-placeholder {
 
 
 /* Media Query 980px */
-@media only screen and (min-width: 769px) {
+@media only screen and (max-width: 980px) {
 .mainheader { 
     max-width: 900px;
-}
-
-.container {
-    justify-content: flex-start;
 }
 }
     
     
     
 /* Media Query 768px */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 769px) {
 .mainheader { 
     margin-left: 2%;
     margin-right: 2%;
@@ -233,11 +230,11 @@ input::-webkit-input-placeholder {
     margin-right: 2%;
     width: auto;
 }
-    
+
 }
     
 /* Media Query 640px */
-@media only screen and (max-width: 640px) {
+@media (max-width: 640px) {
     
 .mainheader { 
     display: flex; 
@@ -261,5 +258,16 @@ input::-webkit-input-placeholder {
     height: auto;
    }
 
+.imagefloat {
+    float: none;
+    width: 100%;
+    height: auto;
+    padding-top: 3%;
+    padding-right: 3%;
+}   
+
+.container {
+    justify-content: center;
+}
 
 }
